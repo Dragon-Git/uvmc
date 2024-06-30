@@ -255,14 +255,13 @@ void uvmc_debug_factory_create (const char* requested_type,
   UVMC_debug_factory_create(requested_type,context);
 }
 
-string uvmc_find_factory_override (const char* requested_type,
+const char* uvmc_find_factory_override (const char* requested_type,
                                    const char* full_inst_path) {
   const char *override_name;
   check_sv_ready();
   svSetScope(svGetScopeFromName("uvmc_pkg"));
   UVMC_find_factory_override(requested_type,full_inst_path,&override_name);
-  string s = override_name; 
-  return s;
+  return override_name;
 }
 
 

@@ -918,7 +918,7 @@ void uvmc_debug_factory_create (const char* requested_type,
 // <uvmc_set_factory_type_override> and <uvmc_set_factory_inst_override>.
 //------------------------------------------------------------------------------
 
-string uvmc_find_factory_override (const char* requested_type,
+const char* uvmc_find_factory_override (const char* requested_type,
                                   const char* context="");
 
 
@@ -1036,7 +1036,7 @@ void uvmc_set_config_object (const char* type_name,
                             const char* field_name,
                             T &value,
                             uvmc_packer *packer=NULL) {
-  static bits_t bits;
+  static bits_t* bits;
   static uvmc_packer def_packer;
   if (packer == NULL) {
     packer = &def_packer;
@@ -1187,7 +1187,7 @@ bool uvmc_get_config_object (const char* type_name,
                             const char* field_name,
                             T &value,
                             uvmc_packer *packer=NULL) {
-  static bits_t bits;
+  static bits_t* bits;
   static uvmc_packer def_packer;
   if (packer == NULL) {
     packer = &def_packer;

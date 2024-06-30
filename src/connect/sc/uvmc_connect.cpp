@@ -256,7 +256,7 @@ int uvmc_read_connections_file(const string filename)
     file.close();
   }
   else {
-    cerr << "Error: Can not open connections file '" << file << "'" << endl;
+    cerr << "Error: Can not open connections file '" << filename << "'" << endl;
     return -1;
   }
   return 0;
