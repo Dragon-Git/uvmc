@@ -252,6 +252,7 @@ endfunction
 function automatic void UVMC_print_topology(string contxt, int depth);
   uvm_root top = uvm_root::get();
   uvm_component comps[$];
+  uvm_printer uvm_default_printer = uvm_printer::get_default();
   int depth_save;
   if (contxt == "")
     comps.push_back(top);
