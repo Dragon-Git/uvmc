@@ -399,6 +399,7 @@ function void UVMC_set_config_object (string type_name,
                                       string field_name,
                                       bits_t value);
   typedef uvmc_default_converter #(uvm_object) converter;
+  uvm_factory factory = uvm_factory::get();
   uvm_object obj;
   uvm_component comp;
   comp = get_context(contxt, "UVMC_SET_CONFIG_OBJECT", 0);
