@@ -383,8 +383,8 @@ virtual class uvmc_base;
 
     if (packer == null) begin
       packer = new();
-      packer.use_metadata = 1;
-      packer.big_endian = 0;
+      //TODO:packer.use_metadata = 1;
+      //TODO:packer.big_endian = 0;
     end
 
     this.packer = packer;
